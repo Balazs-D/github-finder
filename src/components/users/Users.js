@@ -1,41 +1,31 @@
-import React, { Component } from 'react'
+import React from 'react'
 import UserItem from './UserItem'
+import Spinner from '../Layouts/Spinner'
+import PropTypes from 'prop-types'
 
- class UsersU extends Component {
-     state = {
-        users: [
-            {
-      id: '1',
-      login: 'mojombo',
-      avatar_url: 'https://avatars0.githubusercontent.com/u/1?v=4',
-      html_url: 'https://github.com/mojombo'
-    },
-    {
-      id: '2',
-      login: 'Leandro',
-      avatar_url: 'https://avatars1.githubusercontent.com/u/34239373?s=400&v=4',
-      html_url: 'https://github.com/LeandroDCI'
-    },
-    {
-      id: '3',
-      login: 'magnum',
-      avatar_url: 'https://avatars2.githubusercontent.com/u/1268598?s=400&v=4',
-      html_url: 'https://github.com/magnumripper'
-    } 
-        ]
-     }
-
-    render() {
-        return (
+ const Users = ({ users, loading}) => {
+  if(loading){
+      return <Spinner />
+  }
+  else {
+     return (
             <div style={userStyle}>
 
-             {this.state.users.map(user => (
+             {users.map(user => (
                  <UserItem key={user.id} user={user} />
              ))}
                 
             </div>
         )
-    }
+
+  }   
+  
+    
+}
+
+Users.propTypes = {
+  users: PropTypes.array.isRequired,
+  loading: PropTypes.bool.isRequired,
 }
 
 const userStyle= {
@@ -43,4 +33,4 @@ const userStyle= {
   gridTemplateColumns: 'repeat(3, 1fr)',
   gridGap: '1rem'
 }
-export default UsersU
+export default Users
