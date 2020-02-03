@@ -15,4 +15,3 @@ Find any profile on Github. Get basic informations about every user. API Fetch g
 
 ![Screenshot](/)
 
-Go to [app](https://balazs-d.github.io/ToDoApp_React/).
