@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Navbar = ({ title}) => {
   
         return (
-          <nav className='navbar bg-primary'>
+          <nav className='navbar bg-success'>
             <h1>
               <i className='fab fa-github'></i> {title}
             </h1>
