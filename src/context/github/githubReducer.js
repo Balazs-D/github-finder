@@ -5,6 +5,7 @@ import {
   GET_USER,
   GET_REPOS
 } from '../types';
+import { returnStatement } from '@babel/types';
 
 export default (state, action) => {
   switch (action.type) {
@@ -19,6 +20,13 @@ export default (state, action) => {
       return {
         ...state,
         users: [],
+        loading: false
+      };
+
+    case GET_REPOS:
+      return {
+        ...state,
+        repos: action.payload,
         loading: false
       };
 
