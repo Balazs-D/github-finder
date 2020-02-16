@@ -13,4 +13,4 @@ Find any profile on Github. Get basic informations about every user. API Fetch g
 
 ![Screenshot](/src/github.png)
 
-### [Go to app.](https://github-finder-eight.now.sh)
+### [Go to app.](https://github-finder-pi.now.sh)
